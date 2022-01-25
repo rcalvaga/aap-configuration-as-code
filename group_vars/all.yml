@@ -41,11 +41,13 @@ controller_projects:
     update: true
     
 controller_credentials: 
-  - credential_type: Machine
-    organization: Default
-    name: gce-machine-credentials
+  - name: gce-machine-credentials
     description: This credential can be used with GCE instances
+    organization: Default
+    credential_type: Machine
     inputs:
-      username: "azulman"
+      username: azulman
       ssh_key_data: "{{ ssh_private_key }}"
+      become_method: sudo
+
     
