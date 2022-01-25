@@ -46,6 +46,6 @@ controller_credentials:
     name: gce-machine-credentials
     description: This credential can be used with GCE instances
     inputs:
-      username: azulman
+      username: "azulman"
       ssh_key_data: "{{ ssh_private_key }}"
     
