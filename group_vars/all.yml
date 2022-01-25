@@ -40,14 +40,20 @@ controller_projects:
     wait: true
     update: true
     
-controller_credentials: 
-  - name: GCE Machine Credentials
-    description: This credential can be used with GCE instances
-    organization: Default
-    credential_type: Machine
-    inputs:
-      username: azulman
-      ssh_key_data: "{{ ssh_private_key }}"
-      become_method: sudo
+controller_credentials:
+- name: gitlab
+  description: Credentials for GitLab
+  organization: Default
+  credential_type: Source Control
+  inputs:
+    username: person
+    password: password
+- name: localuser
+  description: Machine Credential example with become_method input
+  credential_type: Machine
+  inputs:
+    username: localuser
+    password: password
+    become_method: sudo
 
     
