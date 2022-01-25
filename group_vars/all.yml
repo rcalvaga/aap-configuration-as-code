@@ -40,6 +40,7 @@ controller_projects:
     wait: true
     update: true
     
+controller_credentials: 
   - credential_type: Machine
     organization: Default
     name: gce-machine-credentials
