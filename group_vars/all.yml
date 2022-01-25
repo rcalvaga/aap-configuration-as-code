@@ -2,7 +2,7 @@
 controller_user_accounts:
   - user: "rcalva"
     is_superuser: false
-    password: "Redhat1!"
+    password: "{{ password }}"
   - user: "ansible"
     is_superuser: false
-    password: "Redhat1!"
+    password: "{{ password }}"
