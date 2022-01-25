@@ -41,7 +41,7 @@ controller_projects:
     update: true
     
 controller_credentials: 
-  - name: gce-machine-credentials
+  - name: GCE Machine Credentials
     description: This credential can be used with GCE instances
     organization: Default
     credential_type: Machine
