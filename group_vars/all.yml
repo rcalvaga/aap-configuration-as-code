@@ -6,3 +6,33 @@ controller_user_accounts:
   - user: "ansible"
     is_superuser: false
     password: "{{ user_password }}"
+    
+controller_projects:
+  - name: GCE Project
+    scm_type: git
+    scm_url: https://github.com/rcalvaga/gce-ansible.git
+    scm_branch: master
+    scm_clean: true
+    description: GCE Project
+    organization: Default
+    wait: true
+    update: true
+  - name: Azure Project
+    scm_type: git
+    scm_url: https://github.com/rcalvaga/azure-ansible.git
+    scm_branch: master
+    scm_clean: true
+    description: Azure Project
+    organization: Default
+    wait: true
+    update: true
+  - name: AWS Project
+    scm_type: git
+    scm_url: https://github.com/rcalvaga/aws-ansible.git
+    scm_branch: master
+    scm_clean: true
+    description: AWS Project
+    organization: Default
+    wait: true
+    update: true
+    
