@@ -1,8 +1,8 @@
 ---
 controller_user_accounts:
-  - user: "rcalva"
+  - user: "rcalvaga"
     is_superuser: true
-    password: "{{ password }}"
+    password: "{{ admin_password }}"
   - user: "ansible"
     is_superuser: false
-    password: "{{ password }}"
+    password: "{{ user_password }}"
