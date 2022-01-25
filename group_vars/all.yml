@@ -40,3 +40,11 @@ controller_projects:
     wait: true
     update: true
     
+  - credential_type: Machine
+    organization: Default
+    name: gce-machine-credentials
+    description: This credential can be used with GCE instances
+    inputs:
+      username: azulman
+      ssh_key_data: "{{ ssh_private_key }}"
+    
