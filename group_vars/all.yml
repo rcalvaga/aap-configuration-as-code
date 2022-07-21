@@ -10,7 +10,10 @@ controller_user_accounts:
   - user: "ansible"
     is_superuser: false
     password: "{{ user_password }}"
-    
+  - user: "azulman"
+    is_superuser: false
+    password: "{{ admin_password }}"
+ 
 controller_projects:
   - name: GCE Project
     scm_type: git
@@ -18,7 +21,7 @@ controller_projects:
     scm_branch: master
     scm_clean: true
     description: GCE Project
-    organization: Default
+    organization: "{{ organization }}"
     wait: true
     update: true
   - name: Azure Project
@@ -27,7 +30,7 @@ controller_projects:
     scm_branch: master
     scm_clean: true
     description: Azure Project
-    organization: Default
+    organization: "{{ organization }}"
     wait: true
     update: true
   - name: AWS Project
@@ -36,16 +39,87 @@ controller_projects:
     scm_branch: master
     scm_clean: true
     description: AWS Project
-    organization: Default
+    organization: "{{ organization }}"
     wait: true
     update: true
+  - name: Ethermine Project
+    scm_type: git
+    scm_url: https://github.com/rcalvaga/ethermine-ansible
+    scm_branch: main
+    scm_clean: true
+    description: Ethermine Project
+    organization: "{{ organization }}"
+    wait: true
+    update: true
+  - name: Ansible Tower Project
+    scm_type: git
+    scm_url: https://github.com/rcalvaga/tower-ansible
+    scm_branch: master
+    scm_clean: true
+    description: Ansible Tower Project
+    organization: "{{ organization }}"
+    wait: true
+    update: true 
+  - name: KVM Project
+    scm_type: git
+    scm_url: https://github.com/rcalvaga/libvirt-kvm-ansible
+    scm_branch: master
+    scm_clean: true
+    description: KVM Project
+    organization: "{{ organization }}"
+    wait: true
+    update: true 
+  - name: Nessus Project
+    scm_type: git
+    scm_url: https://github.com/rcalvaga/tenable-nessus-ansible
+    scm_branch: main
+    scm_clean: true
+    description: Nessus Project
+    organization: "{{ organization }}"
+    wait: true
+    update: true 
+  - name: RHEL7 Hardening
+    scm_type: git
+    scm_url: https://github.com/rcalvaga/rhel7-hardening-ansible
+    scm_branch: main
+    scm_clean: true
+    description: RHEL7 Hardening
+    organization: "{{ organization }}"
+    wait: true
+    update: true 
+  - name: rhel7-pci-dss-hardening
+    scm_type: git
+    scm_url: https://github.com/rcalvaga/rhel7-pci-dss-hardening
+    scm_branch: main
+    scm_clean: true
+    description: rhel7-pci-dss-hardening
+    organization: "{{ organization }}"
+    wait: true
+    update: true 
+  - name: ServiceNow-Project
+    scm_type: git
+    scm_url: https://github.com/mdelder/ansible-servicenow.git
+    scm_branch: master
+    scm_clean: true
+    description: ServiceNow-Project
+    organization: "{{ organization }}"
+    wait: true
+    update: true 
+  - name: Windows Update
+    scm_type: git
+    scm_url: https://github.com/rcalvaga/ansible-role-windows_update
+    scm_branch: master
+    scm_clean: true
+    description: Windows Update
+    organization: "{{ organization }}"
+    wait: true
+    update: true 
     
 controller_credentials:
-  - name: gitlab
-    description: Credentials for GitLab
-    organization: Default
-    credential_type: Source Control
+  - name: AWS Credentials
+    description: AWS Credentials
+    organization: "{{ organization }}"
+    credential_type: Amazon Web Services
     inputs:
-      username: person
-      password: password
-    
+      username: "{{ aws_access_key }}"
+      password: "{{ aws_secret_key }}"
