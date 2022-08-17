@@ -163,3 +163,23 @@ controller_templates:
       subnet: TestSubnet
       subnet_prefix: 10.0.0.0/24
     ask_variables_on_launch: yes
+    
+  - name: Azure - Delete Resource Group
+    organization: "{{ organization }}"
+    execution_environment: Ansible Engine 2.9 execution environment
+    job_type: run
+    inventory: Demo Inventory
+    project: Azure Project
+    playbook: azure-cfme-ansible-delete-resourcegroup.yml
+    credentials:
+    - Azure Credentials
+    survey: {}
+    extra_vars:
+      resourcegroup: Test
+      location: centralus
+      storageaccount: teststorageaccount2326
+      virtualnetwork: TestNetwork
+      address_prefix: 10.0.0.0/16
+      subnet: TestSubnet
+      subnet_prefix: 10.0.0.0/24
+    ask_variables_on_launch: yes
