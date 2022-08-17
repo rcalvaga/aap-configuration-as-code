@@ -133,3 +133,12 @@ controller_credentials:
       client: "{{ azure_client_id }}"
       secret: "{{ azure_secret }}"
       tenant: "{{ azure_tenant }}"
+      
+  - name: GCE Credentials
+    description: GCE Google Credentials
+    organization: "{{ organization }}"
+    credential_type: Amazon Web Services
+    inputs:
+      username: "{{ gce_account_email }}"
+      project: "{{ gce_project }}"
+      ssh_key_data: "{{ gce_ssh_key_data }}"
