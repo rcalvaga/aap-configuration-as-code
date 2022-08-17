@@ -152,8 +152,7 @@ controller_templates:
     credentials:
     - Azure Credentials
     survey: {}
-    extra_vars: |
-      ---
+    extra_vars:
       resourcegroup: Test
       location: centralus
       storageaccount: teststorageaccount2326
