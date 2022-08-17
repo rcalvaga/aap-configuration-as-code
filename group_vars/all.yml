@@ -137,7 +137,7 @@ controller_credentials:
   - name: GCE Credentials
     description: GCE Google Credentials
     organization: "{{ organization }}"
-    credential_type: Amazon Web Services
+    credential_type: Google Compute Engine
     inputs:
       username: "{{ gce_account_email }}"
       project: "{{ gce_project }}"
