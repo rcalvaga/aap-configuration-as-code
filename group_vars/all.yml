@@ -142,3 +142,22 @@ controller_credentials:
       username: "{{ gce_account_email }}"
       project: "{{ gce_project }}"
       ssh_key_data: "{{ gce_ssh_key_data }}"
+      
+controller_templates:
+  - name: Azure - Create Resource Group
+    job_type: run
+    inventory: Demo Inventory
+    project: Azure Project
+    playbook: azure-cfme-ansible-create-resourcegroup.yml
+    credentials:
+    - Azure Credentials
+    survey: {}
+    extra_vars: |
+      ---
+      resourcegroup: Test
+      location: centralus
+      storageaccount: teststorageaccount2326
+      virtualnetwork: TestNetwork
+      address_prefix: 10.0.0.0/16
+      subnet: TestSubnet
+      subnet_prefix: 10.0.0.0/24
