@@ -146,6 +146,7 @@ controller_credentials:
 controller_templates:
   - name: Azure - Create Resource Group
     organization: "{{ organization }}"
+    execution_environment: Ansible Engine 2.9 execution environment
     job_type: run
     inventory: Demo Inventory
     project: Azure Project
