@@ -163,6 +163,3 @@ controller_templates:
       subnet: TestSubnet
       subnet_prefix: 10.0.0.0/24
     ask_variables_on_launch: yes
-    labels:
-    - azure
-    - cloud
