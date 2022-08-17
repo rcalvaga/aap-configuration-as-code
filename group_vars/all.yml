@@ -123,3 +123,13 @@ controller_credentials:
     inputs:
       username: "{{ aws_access_key }}"
       password: "{{ aws_secret_key }}"
+      
+  - name: Azure Credentials
+    description: Azure Credentials
+    organization: "{{ organization }}"
+    credential_type: Microsoft Azure Resource Manager
+    inputs:
+      subscription: "{{ azure_subscription_id }}"
+      client: "{{ azure_client_id }}"
+      secret: "{{ azure_secret }}"
+      tenant: "{{ azure_tenant }}"
