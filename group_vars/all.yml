@@ -145,6 +145,7 @@ controller_credentials:
       
 controller_templates:
   - name: Azure - Create Resource Group
+    organization: "{{ organization }}"
     job_type: run
     inventory: Demo Inventory
     project: Azure Project
