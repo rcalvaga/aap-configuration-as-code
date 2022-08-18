@@ -156,6 +156,16 @@ controller_inventories:
     organization: "{{ organization }}"
     description: GCE Inventory
     
+controller_inventory_sources:
+  - name: AWS Source
+    source: ec2
+    inventory: AWS Inventory
+    credential: AWS Credentials
+    description: created using Ansible controller collections
+    overwrite: true
+    update_on_launch: true
+    update_cache_timeout: 0
+    
 controller_templates:
   - name: Azure - Create Resource Group
     organization: "{{ organization }}"
