@@ -143,6 +143,19 @@ controller_credentials:
       project: "{{ gce_project }}"
       ssh_key_data: "{{ gce_ssh_key_data }}"
       
+controller_inventories:
+  - name: AWS Inventory
+    organization: "{{ organization }}"
+    description: AWS Inventory
+    
+  - name: Azure Inventory
+    organization: "{{ organization }}"
+    description: Azure Inventory
+    
+  - name: GCE Inventory
+    organization: "{{ organization }}"
+    description: GCE Inventory
+    
 controller_templates:
   - name: Azure - Create Resource Group
     organization: "{{ organization }}"
