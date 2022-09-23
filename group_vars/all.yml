@@ -183,7 +183,11 @@ controller_inventories:
   - name: GCE Inventory
     organization: "{{ organization }}"
     description: GCE Inventory
-    
+
+  - name: KVM Inventory
+    organization: "{{ organization }}"
+    description: KVM Inventory
+
 controller_inventory_sources:
   - name: AWS Source
     source: ec2
@@ -269,3 +273,4 @@ controller_templates:
         hostname: test1.localdomain  
         os_type: centos7.0
         file_type: qcow2
+    ask_variables_on_launch: yes
