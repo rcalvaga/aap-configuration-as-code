@@ -134,9 +134,6 @@ controller_credential_types:
     extra_vars:
       kvm_password: !unsafe '{{ kvm_password }}'
       kvm_username: !unsafe '{{ kvm_username }}'
-    env:
-      kvm_password_env: !unsafe "{{ kvm_password }}"
-      kvm_username_env: !unsafe "{{ kvm_username }}"
       
 controller_credentials:
   - name: AWS Credentials
