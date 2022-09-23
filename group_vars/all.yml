@@ -143,6 +143,14 @@ controller_credentials:
     inputs:
       username: "{{ aws_access_key }}"
       password: "{{ aws_secret_key }}"
+
+  - name: KVM Server Credentials
+    description: KVM Server Credentials
+    organization: "{{ organization }}"
+    credential_type: KVM Server Credential Type
+    inputs:
+      kvm_username: "{{ kvm_username }}"
+      kvm_password: "{{ kvm_password }}"
       
   - name: Azure Credentials
     description: Azure Credentials
