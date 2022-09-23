@@ -114,7 +114,30 @@ controller_projects:
     organization: "{{ organization }}"
     wait: true
     update: true 
-    
+
+controller_credential_types:
+- name: KVM Server Credential Type
+  description: KVM Server Credential Type
+  inputs:
+    fields:
+    - id: kvm_username
+      type: string
+      label: KVM Server Username
+    - id: kvm_password
+      type: string
+      label: KVM Server Password
+      secret: true
+    required:
+    - kvm_username
+    - kvm_password
+  injectors:
+    extra_vars:
+      kvm_password: !unsafe '{{ kvm_password }}'
+      kvm_username: !unsafe '{{ kvm_username }}'
+    env:
+      kvm_password_env: !unsafe "{{ kvm_password }}"
+      kvm_username_env: !unsafe "{{ kvm_username }}"
+      
 controller_credentials:
   - name: AWS Credentials
     description: AWS Credentials
