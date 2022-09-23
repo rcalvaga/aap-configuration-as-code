@@ -243,3 +243,29 @@ controller_templates:
       subnet: TestSubnet
       subnet_prefix: 10.0.0.0/24
     ask_variables_on_launch: yes
+
+  - name: KVM - Create VMs KVM Libvirt
+    organization: "{{ organization }}"
+    description: KVM - Create VMs KVM Libvirt
+    execution_environment: Ansible Engine 2.9 execution environment
+    job_type: run
+    inventory: KVM Inventory
+    project: KVM Project
+    playbook: tower-ansible-create-vm-libvirt.yml
+    limit: kvm-nodes
+    verbosity: 3
+    become_enabled: yes
+    credentials:
+    - KVM Credentials
+    survey: {}
+    extra_vars:
+      vm_location: "/var/lib/libvirt/images"
+      root_pass: "Redhat1!"
+      guests:
+        test:
+        mem: 512
+        cpus: 1
+        template_name: centos-7.4  
+        hostname: test1.localdomain  
+        os_type: centos7.0
+        file_type: qcow2
