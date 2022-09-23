@@ -260,7 +260,7 @@ controller_templates:
     verbosity: 3
     become_enabled: yes
     credentials:
-    - KVM Credentials
+    - KVM Server Credentials
     survey: {}
     extra_vars:
       vm_location: "/var/lib/libvirt/images"
