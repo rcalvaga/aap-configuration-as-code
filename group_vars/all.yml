@@ -267,7 +267,7 @@ controller_templates:
       root_pass: "{{ kvm_guest_password }}"
       guests:
         vm1:
-          name: test
+          name: "{{ kvm_guest_name }}"
           mem: 512
           cpus: 1
           template_name: centos-7.4  
@@ -294,6 +294,6 @@ controller_templates:
       vm_location: "{{ kvm_disk_location }}"
       guests:
         vm1:
-          name: test
+          name: "{{ kvm_guest_name }}"
           file_type: qcow2
     ask_variables_on_launch: yes
