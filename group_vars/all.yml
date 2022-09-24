@@ -206,6 +206,16 @@ controller_inventory_sources:
     overwrite: true
     update_on_launch: true
     update_cache_timeout: 0
+
+controller_hosts:
+  - name: "{{ kvm_host }}"
+    inventory: KVM Inventory
+    variables:
+      ansible_python_interpreter: /usr/bin/python3
+      ansible_user: "{{ kvm_username }}" 
+      ansible_ssh_pass: "{{ kvm_password }}"
+      ansible_become_pass: "{{ kvm_password }}"
+      ansible_host: "{{ kvm_host_ip }}"
     
 controller_templates:
   - name: Azure - Create Resource Group
