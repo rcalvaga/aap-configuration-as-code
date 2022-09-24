@@ -266,13 +266,14 @@ controller_templates:
       vm_location: "{{ kvm_disk_location }}"
       root_pass: "{{ kvm_guest_password }}"
       guests:
-        test:
-        mem: 512
-        cpus: 1
-        template_name: centos-7.4  
-        hostname: test1.localdomain  
-        os_type: centos7.0
-        file_type: qcow2
+        vm1:
+          name: test
+          mem: 512
+          cpus: 1
+          template_name: centos-7.4  
+          hostname: test1.localdomain  
+          os_type: centos7.0
+          file_type: qcow2
     ask_variables_on_launch: yes
 
   - name: KVM - Delete VMs KVM Libvirt
@@ -292,6 +293,7 @@ controller_templates:
     extra_vars:
       vm_location: "{{ kvm_disk_location }}"
       guests:
-        vm:
+        vm1:
+          name: test
           file_type: qcow2
     ask_variables_on_launch: yes
