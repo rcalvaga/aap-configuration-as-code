@@ -293,5 +293,5 @@ controller_templates:
       vm_location: "{{ kvm_disk_location }}"
       guests:
         {{ kvm_guest_name }}:
-        file_type: qcow2
+          file_type: qcow2
     ask_variables_on_launch: yes
