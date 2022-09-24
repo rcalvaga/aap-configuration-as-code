@@ -274,3 +274,24 @@ controller_templates:
         os_type: centos7.0
         file_type: qcow2
     ask_variables_on_launch: yes
+
+  - name: KVM - Delete VMs KVM Libvirt
+    organization: "{{ organization }}"
+    description: KVM - Delete VMs KVM Libvirt
+    execution_environment: Ansible Engine 2.9 execution environment
+    job_type: run
+    inventory: KVM Inventory
+    project: KVM Project
+    playbook: tower-ansible-delete-vm-libvirt.yml
+    limit: kvm-nodes
+    verbosity: 3
+    become_enabled: yes
+    credentials:
+    - KVM Server Credentials
+    survey: {}
+    extra_vars:
+      vm_location: "/var/lib/libvirt/images"
+      guests:
+        test:
+        file_type: qcow2
+    ask_variables_on_launch: yes
