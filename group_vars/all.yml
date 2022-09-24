@@ -216,6 +216,13 @@ controller_hosts:
       ansible_ssh_pass: "{{ kvm_password }}"
       ansible_become_pass: "{{ kvm_password }}"
       ansible_host: "{{ kvm_host_ip }}"
+
+controller_groups:
+  - name: kvm-nodes
+    description: Group for KVM Nodes
+    inventory: KVM Inventory
+    hosts:
+     - "{{ kvm_host }}"
     
 controller_templates:
   - name: Azure - Create Resource Group
