@@ -290,8 +290,8 @@ controller_templates:
     - KVM Server Credentials
     survey: {}
     extra_vars:
-      vm_location: "/var/lib/libvirt/images"
+      vm_location: "{{ disk_location }}"
       guests:
-        test:
+        "{{ vm_name }}}":
         file_type: qcow2
     ask_variables_on_launch: yes
