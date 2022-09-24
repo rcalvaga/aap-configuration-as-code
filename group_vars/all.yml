@@ -263,8 +263,8 @@ controller_templates:
     - KVM Server Credentials
     survey: {}
     extra_vars:
-      vm_location: "/var/lib/libvirt/images"
-      root_pass: "Redhat1!"
+      vm_location: "{{ disk_location }}"
+      root_pass: "{{ root_password }}"
       guests:
         test:
         mem: 512
@@ -292,6 +292,6 @@ controller_templates:
     extra_vars:
       vm_location: "{{ disk_location }}"
       guests:
-        "{{ vm_name }}":
+        test:
         file_type: qcow2
     ask_variables_on_launch: yes
