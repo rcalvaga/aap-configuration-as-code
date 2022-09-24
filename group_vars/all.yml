@@ -263,8 +263,8 @@ controller_templates:
     - KVM Server Credentials
     survey: {}
     extra_vars:
-      vm_location: "{{ disk_location }}"
-      root_pass: "{{ root_password }}"
+      vm_location: "{{ kvm_disk_location }}"
+      root_pass: "{{ admin_password }}"
       guests:
         test:
         mem: 512
@@ -290,7 +290,7 @@ controller_templates:
     - KVM Server Credentials
     survey: {}
     extra_vars:
-      vm_location: "{{ disk_location }}"
+      vm_location: "{{ kvm_disk_location }}"
       guests:
         test:
         file_type: qcow2
