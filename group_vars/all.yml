@@ -6,13 +6,13 @@ controller_organizations:
 controller_user_accounts:
   - user: "rcalvaga"
     is_superuser: true
-    password: "{{ admin_password }}"
+    password: "{{ aap_admin_password }}"
   - user: "ansible"
     is_superuser: false
-    password: "{{ user_password }}"
+    password: "{{ aap_user_password }}"
   - user: "azulman"
     is_superuser: false
-    password: "{{ admin_password }}"
+    password: "{{ aap_admin_password }}"
  
 controller_projects:
   - name: GCE Project
@@ -264,7 +264,7 @@ controller_templates:
     survey: {}
     extra_vars:
       vm_location: "{{ kvm_disk_location }}"
-      root_pass: "{{ admin_password }}"
+      root_pass: "{{ kvm_guest_password }}"
       guests:
         test:
         mem: 512
