@@ -1,6 +1,4 @@
 ---
-# Configuration As Code Variables
-
 controller_organizations:
   - name: DevOps
   - name: Default
