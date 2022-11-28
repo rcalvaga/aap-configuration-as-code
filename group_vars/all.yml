@@ -96,12 +96,12 @@ controller_projects:
     organization: "{{ organization }}"
     wait: true
     update: true 
-  - name: ServiceNow-Project
+  - name: ServiceNow Project
     scm_type: git
     scm_url: https://github.com/mdelder/ansible-servicenow.git
     scm_branch: master
     scm_clean: false
-    description: ServiceNow-Project
+    description: ServiceNow Project
     organization: "{{ organization }}"
     wait: true
     update: true 
