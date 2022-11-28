@@ -1,5 +1,5 @@
 ---
-- name: Playbook to configure ansible Controller post installation
+- name: Playbook to configure Ansible Controller post installation
   hosts: localhost
   connection: local
   vars:
