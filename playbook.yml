@@ -6,3 +6,4 @@
     controller_validate_certs: false
   collections:
     - awx.awx
+    - infra.aap_configuration
