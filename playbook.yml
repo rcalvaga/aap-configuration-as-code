@@ -6,8 +6,7 @@
     controller_validate_certs: false
   collections:
     - awx.awx
-    - redhat_cop.controller_configuration
-
+    - infra.aap_configuration
   roles:
     - {role: settings, when: controller_settings is defined, tags: settings}
     - {role: organizations, when: controller_organizations is defined, tags: organizations}
