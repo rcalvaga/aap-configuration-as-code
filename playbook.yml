@@ -5,5 +5,5 @@
   vars:
     controller_validate_certs: false
   collections:
-    - awx.awx
+    - ansible.controller
     - infra.aap_configuration
