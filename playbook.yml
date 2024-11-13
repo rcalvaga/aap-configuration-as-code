@@ -6,4 +6,4 @@
     controller_validate_certs: false
   collections:
     - ansible.controller
-    - infra.aap_configuration
+    - infra.controller_configuration
