@@ -1,4 +1,3 @@
 ---
 collections:
-  - name: redhat_cop.controller_configuration
-  - name: awx.awx
+  - name: infra.controller_configuration
