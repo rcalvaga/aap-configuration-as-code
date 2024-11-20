@@ -1,18 +1,18 @@
 ---
-controller_organizations:
-  - name: DevOps
-  - name: Default
+#controller_organizations:
+#  - name: DevOps
+#  - name: Default
   
-controller_user_accounts:
-  - user: "rcalvaga"
-    is_superuser: true
-    password: "{{ aap_admin_password }}"
-  - user: "ansible"
-    is_superuser: false
-    password: "{{ aap_user_password }}"
-  - user: "azulman"
-    is_superuser: false
-    password: "{{ aap_admin_password }}"
+#controller_user_accounts:
+#  - user: "rcalvaga"
+#    is_superuser: true
+#    password: "{{ aap_admin_password }}"
+#  - user: "ansible"
+#    is_superuser: false
+#    password: "{{ aap_user_password }}"
+#  - user: "azulman"
+#    is_superuser: false
+#    password: "{{ aap_admin_password }}"
  
 controller_projects:
   - name: GCE Project
