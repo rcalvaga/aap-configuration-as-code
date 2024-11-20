@@ -2,7 +2,7 @@
 - name: Playbook to configure ansible controller post installation
   hosts: all
   vars_files:
-    - ../vaults/{{ env }}.yml
+    - ../vaults/all.yml
   connection: local
   tasks:
     - name: Call dispatch role
