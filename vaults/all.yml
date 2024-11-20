@@ -27,11 +27,11 @@ ah_token_password: ''
 
 # This is the password of the 'api_user' user that the playbook will create
 # in the controller(s)
-controller_api_user_pass: 'Redhat1!'
+controller_api_user_pass: ''
 
 # The admin password for the controller; if unspecified, the default
 # is Password1234!
-controller_pass: 'Redhat1!'
+controller_pass: ''
 
 # The admin password for the private Automation Hub; if unspecified, the default
 # is Password1234!
