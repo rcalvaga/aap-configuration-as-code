@@ -227,7 +227,7 @@ controller_groups:
 controller_templates:
   - name: Azure - Create Resource Group
     organization: "{{ organization }}"
-    execution_environment: Ansible Engine 2.9 execution environment
+    execution_environment: Default execution environment
     job_type: run
     inventory: Demo Inventory
     project: Azure Project
@@ -247,7 +247,7 @@ controller_templates:
     
   - name: Azure - Delete Resource Group
     organization: "{{ organization }}"
-    execution_environment: Ansible Engine 2.9 execution environment
+    execution_environment: Default execution environment
     job_type: run
     inventory: Demo Inventory
     project: Azure Project
@@ -268,7 +268,7 @@ controller_templates:
   - name: KVM - Create VMs KVM Libvirt
     organization: "{{ organization }}"
     description: KVM - Create VMs KVM Libvirt
-    execution_environment: Ansible Engine 2.9 execution environment
+    execution_environment: Default execution environment
     job_type: run
     inventory: KVM Inventory
     project: KVM Project
@@ -296,7 +296,7 @@ controller_templates:
   - name: KVM - Delete VMs KVM Libvirt
     organization: "{{ organization }}"
     description: KVM - Delete VMs KVM Libvirt
-    execution_environment: Ansible Engine 2.9 execution environment
+    execution_environment: Default execution environment
     job_type: run
     inventory: KVM Inventory
     project: KVM Project
