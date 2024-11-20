@@ -4,6 +4,9 @@
   vars_files:
     - ../vaults/all.yml
   connection: local
+  collections:
+    - awx.awx
+    - infra.aap_configuration
   tasks:
     - name: Call dispatch role
       ansible.builtin.include_role:
