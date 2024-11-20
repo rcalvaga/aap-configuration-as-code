@@ -2,7 +2,7 @@
 - name: Playbook to configure ansible controller post installation
   hosts: all
   vars_files:
-    - ../vaults/all.yml
+    - ../group_vars/all.yml
   connection: local
   collections:
     - awx.awx
