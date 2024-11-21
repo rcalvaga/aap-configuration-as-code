@@ -278,7 +278,44 @@ controller_templates:
     become_enabled: yes
     credentials:
     - KVM Server Credentials
-    survey: {}
+    survey: [
+       {
+            "question_name": "VM Name",
+            "question_description": "VM Name",
+            "required": true,
+            "type": "text",
+            "variable": "vm_name",
+            "min": 0,
+            "max": 20,
+            "default": "test",
+            "choices": "",
+            "new_question": true
+        },
+        {
+            "question_name": "VM Location",
+            "question_description": "VM Location",
+            "required": true,
+            "type": "multiplechoice",
+            "variable": "vm_location",
+            "min": 0,
+            "max": 1024,
+            "default": "",
+            "choices": "/var/lib/libvirt/images\n/home/kvm",
+            "new_question": true
+        },
+        {
+            "question_name": "VM Disk Type",
+            "question_description": "VM Disk Type",
+            "required": true,
+            "type": "multiplechoice",
+            "variable": "vm_disk_type",
+            "min": 0,
+            "max": 1024,
+            "default": "",
+            "choices": "qcow2\nraw",
+            "new_question": true
+        }
+      ]
     extra_vars:
       vm_location: "{{ kvm_disk_location }}"
       root_pass: "{{ kvm_guest_password }}"
