@@ -278,7 +278,10 @@ controller_templates:
     become_enabled: yes
     credentials:
     - KVM Server Credentials
-    survey: [
+    survey: {     
+      "name": "",
+      "description": "",
+      "spec": [
        {
             "question_name": "VM Name",
             "question_description": "VM Name",
@@ -316,6 +319,7 @@ controller_templates:
             "new_question": true
         }
       ]
+    }
     extra_vars:
       vm_location: "{{ kvm_disk_location }}"
       root_pass: "{{ kvm_guest_password }}"
